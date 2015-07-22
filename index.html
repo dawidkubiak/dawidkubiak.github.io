@@ -22,8 +22,19 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
 <style>
         
-* { margin: 0; padding: 0; }
-
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+ 
+html,
+body,
+div{
+    margin: 0;
+    padding: 0;
+}
 html { 
         box-sizing: border-box;
         background-color: #DBDBD9;
@@ -68,24 +79,19 @@ header {
 }
 
 
-main {
+main 
+{
   display: block;
 }               
-#page-wrap {
-        position: absolute;
+#page-wrap 
+{
+        /*position: absolute;*/
         display: block; 
+        margin: 0 auto;
         width: 560px;
-        overflow: hidden;        
-        left: 50%;
-        margin-left: -240px;
-
-        }
-#page-inside {
-    width: 560px;
-    word-wrap: break-word;
-    padding: 0px 0px 30px 0;
-
+        word-wrap: break-word;
 }
+
 #logo
 {
     margin-bottom: 20px;
@@ -129,9 +135,10 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 }
 .complementaryTop
 {
-    margin-left: auto;
-    position: absolute;
-    right: 0px;
+    position:relative;
+    float:right;
+    display: inline-block;
+    white-space: nowrap;
 }
 #work-with-me
 {
@@ -186,7 +193,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 <body id="top">
 
 <div id="page-wrap">
-    <div id="page-inside">
+
         <header itemscope itemtype="http://schema.org/Person" role="banner">
             <div class="section"><a id="work-with-me" href="mailto:dawid@dawid.me">Work with me</a></div>
             <div class="clear"></div>
@@ -214,9 +221,9 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
             
         </main>
         <aside class="complementary" role="complementary" id="footnote-1">
-            <a class="complementaryTop" data-scroll="" href="#top">Top</a>
+            <a class="complementaryTop" data-scroll="" href="#top">Top</a><div class="clear"></div>
         </aside>
-    </div>
+
 </div>
 
     
