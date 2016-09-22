@@ -17,6 +17,8 @@
 <meta property="og:image" content="http://www.dawid.me/images/dawid.png" />
 <meta property="og:type" content="website" />
 
+<meta name=viewport content="width=device-width, initial-scale=1">
+
 <title>Dawid Kubiak - Freelance Unity Developer</title>
 <link rel="canonical" id="page_url" href="http://dawid.me" />
 <style>
@@ -118,6 +120,12 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
     margin-top: 0.7em;
     margin-bottom: 0em;
 }
+.section .responsive
+{
+	width: 100%;
+    height: auto;
+
+}
 .smaller
 {
     font-size: 1em;
@@ -197,6 +205,29 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 	background-color: gray;
 	width:100%;
 }
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+ 
+#primary{
+    max-width: 650px;
+    margin: 0 auto;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 </style>
 
 
@@ -217,7 +248,9 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 
 <body id="top">
 <!-- <div id="menu-bar"></div> -->
-<div id="page-wrap">
+ <div class="wrap">
+ 
+	 <div id="primary">
 
         <header itemscope itemtype="http://schema.org/Person" role="banner">
 			<h1 id="dawid-kubiak"><span itemprop="name">Dawid Kubiak</span></h1>
@@ -234,7 +267,9 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
             <h2>Past projects</h2>
              <div class="section">
               <h4>Seabeard</h4>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/zrWIQRNqHPA" frameborder="0" allowfullscreen></iframe>
+			  <div class="videoWrapper">
+              	<iframe width="560" height="315" src="https://www.youtube.com/embed/zrWIQRNqHPA" frameborder="0" allowfullscreen></iframe>
+		  	  </div>
               <div class="store-links">
                 <a href="https://play.google.com/store/apps/details?id=com.backflipstudios.seabeard" title="Seabeard on Google Play"><img src="http://www.dawid.me/images/google_small.png" alt="Google Play"/></a>
                 <a href="https://itunes.apple.com/us/app/seabeard/id913754563?mt=8" title="Seabeard on App Store"><img src="http://www.dawid.me/images/apple_small.png" alt="App Store"/></a>
@@ -242,7 +277,9 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
             </div>
             <div class="section">
               <h4>Pocket Shrek</h4>
+			  <div class="videoWrapper">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/5CPW3KkjgWg" frameborder="0" allowfullscreen></iframe>
+		  </div>
               <div class="store-links">
                 <a href="http://bit.ly/PocketShrekGooglePlay" title="Pocket Shrek on Google Play"><img src="http://www.dawid.me/images/google_small.png" alt="Google Play"/></a>
                 <a href="http://bit.ly/PocketShrekiOS" title="Pocket Shrek on App Store"><img src="http://www.dawid.me/images/apple_small.png" alt="App Store" /></a>
@@ -250,7 +287,9 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
             </div>
 		  <div class="section">
               <h4>Professor Astro Cat's Solar System</h4>
+			  <div class="videoWrapper">
              <iframe width="560" height="315" src="https://www.youtube.com/embed/LTZVGtx9-tc" frameborder="0" allowfullscreen></iframe>
+		 </div>
               <div class="store-links">
                  <a href="https://play.google.com/store/apps/details?id=minilabstudios.com.solarsystem" title="Professor Astro Cat on Google Play"><img src="http://www.dawid.me/images/google_small.png" alt="Google Play"/></a>
                 <a href="http://apple.co/1QnrF6W" title="Professor Astro Cat on App Store"><img src="http://www.dawid.me/images/apple_small.png" alt="App Store" /></a>
@@ -258,14 +297,18 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
             </div>
 			<div class="section">
 			 <h4>Artie's Magic Pencil</h4>
+			 <div class="videoWrapper">
              <iframe width="560" height="315" src="https://www.youtube.com/embed/kwbVZvvZq4g" frameborder="0" allowfullscreen></iframe>
+		 </div>
               <div class="store-links">
                 <a href="https://itunes.apple.com/us/app/arties-magic-pencil/id1132630378" title="Artie's Magic Pencil on App Store"><img src="http://www.dawid.me/images/apple_small.png" alt="App Store" /></a>
               </div>
 		  </div>
              <div class="section">
               <h4>Little Legends: Race Day</h4>
+			  <div class="videoWrapper">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/9ctS0D3f9Zk" frameborder="0" allowfullscreen></iframe>
+		  </div>
               <div class="store-links">
                 <a href="https://play.google.com/store/apps/details?id=com.madeinme.littlelegends&hl=en_GB" title="Little Legends on Google Play"><img src="http://www.dawid.me/images/google_small.png" alt="Google Play"/></a>
                 <a href="https://itunes.apple.com/gb/app/little-legends-race-day/id1073526153?ls=1&amp;mt=8" title="Little Legends on App Store"><img src="http://www.dawid.me/images/apple_small.png" alt="App Store" /></a>
@@ -273,7 +316,9 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
             </div>
              <div class="section">
               <h4>Aquafresh Brush Time</h4>
+			  <div class="videoWrapper">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/xS2zIQsUFfk" frameborder="0" allowfullscreen></iframe>
+		  </div>
               <div class="store-links">
                 <a href="https://play.google.com/store/apps/details?id=com.gsk.aquafresh.brushtime.UK&amp;hl=en_GB" title="Aquafresh Brush Time on Google Play"><img src="http://www.dawid.me/images/google_small.png" alt="Google Play"/></a>
                 <a href="https://itunes.apple.com/gb/app/aquafresh-brush-time/id661737439?mt=8" title="Aquafresh Brush Time on App Store"><img src="http://www.dawid.me/images/apple_small.png" alt="App Store" /></a>
@@ -281,7 +326,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
             </div>
              <div class="section">
               <h4>My Little Pony Magical Mysteries</h4>
-              <img width="560" height="315" src="http://www.dawid.me/images/mlp.png" alt="My Little Pony" />
+              <img class="responsive" src="http://www.dawid.me/images/mlp.png" alt="My Little Pony" />
               <div class="store-links">
                 <a href="https://play.google.com/store/apps/details?id=com.eaglemoss.mylittlepony.magicalmysteries" title="My Little Pony Magical Mystery on Google Play"><img src="http://www.dawid.me/images/google_small.png" alt="Google Play"/></a>
                 <a href="https://itunes.apple.com/gb/app/my-little-pony-magical-mysteries/id963203334?mt=8" title="My Little Pony Magical Mystery on App Store"><img src="http://www.dawid.me/images/apple_small.png" alt="App Store" /></a>
@@ -293,6 +338,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
             <a class="complementaryTop" data-scroll="" href="#top">Top</a><div class="clear"></div>
         </aside>
 
+</div>
 </div>
 
     
