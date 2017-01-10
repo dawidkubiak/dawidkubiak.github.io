@@ -124,7 +124,8 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 {
 	padding: 0;
     /* margin-top: 0.7em; */
-    margin: 0.75em 0;
+    /* margin: 0.75em 0; */
+	margin-bottom: 1.5em;
 }
 .section .responsive
 {
