@@ -28,6 +28,7 @@ body {
   font-feature-settings: "liga" 1, "kern";
   text-rendering: optimizeLegibility;
   background: #ffffff;
+  color:#111;
 }
 dl {
   padding: 0;
