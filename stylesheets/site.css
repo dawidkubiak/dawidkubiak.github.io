@@ -78,18 +78,27 @@ header {
 	padding: 1.75em 0 0 0;
 	margin: 0;
 	
+	
 }
 .centered-button a
 {
-    border-radius: 5px 5px 5px 5px;
-    -moz-border-radius: 5px 5px 5px 5px;
-    -webkit-border-radius: 5px 5px 5px 5px;
-    border: 1px solid #EA4E35;
-    padding: 5px 10px;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 1px solid #2b2d32;
+    padding: 15px;
     display: inline-block;
     white-space: nowrap;
 	margin: 0 auto;
+	color: #fff;
+	background: #2b2d32;
+	font-size: 0.66em;
+	text-transform: uppercase;
 	
+}
+.centered-button a:hover
+{
+	 color: #eee;
 }
 #dawid-kubiak
 {
@@ -117,11 +126,11 @@ main
 }        
 address { color: #EA4E35; font-style: normal;}
 a { 
-	color: #EA4E35;
-	text-decoration: none; 
+	color: #111;
+	text-decoration: none;
 	/* border-bottom: #EA4E35 2px solid; */
 }
-a:hover { color: #333; text-decoration: none; }
+a:hover { color: #111; text-decoration: none; }
 
 
 p,address { color: #111; font-size: 1em; font-weight: normal; padding: 0; margin: 0;}
