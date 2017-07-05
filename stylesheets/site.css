@@ -184,7 +184,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
     color: #111;
     transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	text-transform: uppercase;
-	margin: 0 10px;
+	margin: 5px;
 }
 .buttons a:hover
 {
