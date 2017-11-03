@@ -146,10 +146,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
     margin-bottom: 1.5em;
 
 }
-.complementary a, .bio a 
-{
-	border-bottom: #111 2px solid;
-}
+
 
 .complementaryTop
 {
@@ -171,39 +168,31 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 }
 
 .buttons
-{/* 
-	text-align:center; */
+{
 	margin-top:1em;
-  /* 
-  padding-top: 1.75em;
-  padding-bottom: 0em; 
-  font-size: 12px; */
-  /* font-size: 0.9em; */
+	
 }
+.complementary a, .bio a 
+{
+	font-weight: 500;
+}
+
 .buttons a
 {
 	margin-right:0.33em;
 	display: inline-block;
 	position: relative; 
-	border-bottom: #111 2px solid;
-	/* padding: 0 7px 0 0; */
-	/*
-    padding: 13px 26px;
-    background-color: transparent;
-    border: 1px solid #111;
-    border-radius: 3px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06);
-    color: #111;
-    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    	text-transform: uppercase;
-    	margin: 5px; */
-}
-/* .buttons a:hover
-{
-	background-color: #111;
-	color: #fff;
-} */
 
+    border-radius: 25px;
+	background: #eee;
+	padding: 3px 10px;
+	font-weight: 500;
+
+}
+.complementary .buttons
+{
+	text-align: center;
+}
 #menu-bar
 {
 	display: block;
