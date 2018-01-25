@@ -209,7 +209,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 .wrap{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1em;
+    padding: 0em;
 }
  
 #primary{
