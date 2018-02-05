@@ -150,7 +150,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 .complementary
 {
     margin-bottom: 1.5em;
-
+	margin-top: 1.5em;
 }
 
 
@@ -160,6 +160,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
     float:right;
     display: inline-block;
     white-space: nowrap;
+	
 }
 
 .clear
