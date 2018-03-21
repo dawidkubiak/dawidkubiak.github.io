@@ -67,8 +67,7 @@ h2,.section h1
 p.bio
 {
 	padding: 0 0;
-	margin: 0;
-	/* margin-bottom: 0.33em; */
+	margin-bottom: 0.33em;
 }
 h3 a,
 h4 a {
@@ -177,12 +176,8 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 
 .buttons
 {
-	margin-top: 0.85em;
+	margin-top:1em;
 	text-align: center;
-}
-header .buttons
-{
-	margin-top: 0.33em;
 }
 .complementary a, .bio a, #backToTop a 
 {
