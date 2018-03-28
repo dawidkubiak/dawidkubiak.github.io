@@ -48,26 +48,32 @@ h1
   font-size: 2.25em;
   padding: 0;
   margin: 0;
-  text-indent:-1px;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: -0.016em;
+
 }
-.section h1,
+/* .section h1, */
 h2, 
 h3,
 h4 {
   font-size: 1.5em;
   padding: 0;
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.00125em;
+  line-height: 1.25em;
 }
-h2,.section h1
+/* h2,.section h1
 {
 	margin-bottom: 0.33em;
-}
+} */
 p.bio
 {
 	padding: 0 0;
 	margin-bottom: 0.33em;
+	letter-spacing: 0.002em;
+	color: #333333;
+	font-weight: 400;
 }
 h3 a,
 h4 a {
@@ -189,11 +195,12 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 	margin-right:0.33em;
 	display: inline-block;
 	position: relative; 
-	border: 1px solid #111;
+	border: 1px solid #333;
     border-radius: 5px;
-	/* background: #eee; */
+	/* background: #333; */ 
 	padding: 3px 10px;
 	font-weight: 500;
+	color: #333;
 
 }
 .complementary .buttons
