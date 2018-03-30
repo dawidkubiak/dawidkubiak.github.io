@@ -49,8 +49,10 @@ h1
   padding: 0;
   margin: 0;
   font-weight: 600;
-  letter-spacing: -0.016em;
-
+	
+  line-height: 1.15em;
+  margin: 0.25em 0;
+/*   text-indent: -2px; */
 }
 /* .section h1, */
 h2, 
@@ -60,8 +62,9 @@ h4 {
   padding: 0;
   margin: 0;
   font-weight: 500;
-  letter-spacing: 0.00125em;
-  line-height: 1.25em;
+
+  line-height: 1em;
+  text-indent: 1px;
 }
 /* h2,.section h1
 {
@@ -82,7 +85,7 @@ h4 a {
 header {
   display: block;
   padding-top: 1.5em;
-  padding-bottom: 0em;
+  padding-bottom: 0.5em;
   margin: 0;
   
 }
@@ -196,9 +199,9 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 	display: inline-block;
 	position: relative; 
 	border: 1px solid #333;
-    border-radius: 5px;
+    border-radius: 3px;
 	/* background: #333; */ 
-	padding: 3px 10px;
+	padding: 5px 10px;
 	font-weight: 500;
 	color: #333;
 
