@@ -26,7 +26,8 @@ body {
 	-webkit-font-feature-settings: "liga" 1, "kern";
 	font-feature-settings: "liga" 1, "kern";
 	text-rendering: optimizeLegibility;
-	color:#111;
+    color:#111;
+    background: white;
 }
 dl {
   padding: 0;
@@ -201,10 +202,17 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 	border: 1px solid #333;
     border-radius: 3px;
 	/* background: #333; */ 
-	padding: 5px 10px;
-	font-weight: 500;
-	color: #333;
-
+	padding: 1em;
+	font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    background: transparent;
+}
+.buttons a:hover
+{
+    background: #333;
+    color: #eee;
 }
 .complementary .buttons
 {
