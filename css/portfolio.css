@@ -138,7 +138,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 }
 .smaller
 {
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 .centered {
@@ -196,7 +196,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 
 .buttons a
 {
-	margin-right:  10px;
+	margin-right: 10px;
 	display: inline-block;
 	position: relative; 
 	border: 1px solid #333;
