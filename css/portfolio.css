@@ -73,7 +73,7 @@ h4 {
 }
 main h2
 {
-    margin-bottom: 10px;
+    margin:0 0 10px 0;
 }
 /* h2,.section h1
 {
@@ -82,7 +82,7 @@ main h2
 p.bio
 {
 	padding: 0 0;
-	margin-bottom: 0.33em;
+	margin-bottom: 10px;
 	letter-spacing: 0.002em;
 	color: #333333;
 	font-weight: 400;
@@ -194,7 +194,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 }
 header .buttons
 {
-    margin-bottom: 0.3em;
+    margin-bottom: 8px;
 }
 .buttons
 {
