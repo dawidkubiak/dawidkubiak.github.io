@@ -67,6 +67,14 @@ h4 {
   line-height: 1em;
   text-indent: 1px;
 }
+.section h1
+{
+    margin:8px 0 10px 0;
+}
+main h2
+{
+    margin-bottom: 10px;
+}
 /* h2,.section h1
 {
 	margin-bottom: 0.33em;
@@ -128,8 +136,9 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 
 .section 
 {
-	padding: 0;
-	margin-bottom: 0.33em;
+    padding: 0;
+    margin: 0;
+	/* margin-bottom: 0.33em; */
 }
 .section .responsive
 {
@@ -183,11 +192,15 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
     content: "\2191";
     padding-left: 0.25em;
 }
-
+header .buttons
+{
+    margin-bottom: 0.3em;
+}
 .buttons
 {
 	margin-top:1em;
-	text-align: center;
+    text-align: center;
+    margin-bottom: 0;
 }
 .complementary a, .bio a, #backToTop a 
 {
