@@ -63,7 +63,6 @@ h4 {
   padding: 0;
   margin: 0;
   font-weight: 500;
-
   line-height: 1em;
   text-indent: 1px;
 }
@@ -84,7 +83,7 @@ p.bio
 	padding: 0 0;
 	margin-bottom: 10px;
 	letter-spacing: 0.002em;
-	color: #333333;
+	/* color: #333333; */
 	font-weight: 400;
 }
 h3 a,
@@ -202,9 +201,9 @@ header .buttons
     text-align: center;
     margin-bottom: 0;
 }
-.complementary a, .bio a, #backToTop a 
+.complementary #mikko a, .bio a
 {
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .buttons a
