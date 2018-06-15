@@ -53,7 +53,7 @@ h1
 	
   line-height: 1.15em;
   margin: 0.25em 0;
-/*   text-indent: -2px; */
+  text-indent: -1px;
 }
 /* .section h1, */
 h2, 
@@ -137,7 +137,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 {
     padding: 0;
     margin: 0;
-	/* margin-bottom: 0.33em; */
+	/* margin-bottom: 1em; */
 }
 .section .responsive
 {
