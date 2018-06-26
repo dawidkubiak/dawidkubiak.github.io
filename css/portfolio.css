@@ -211,21 +211,19 @@ header .buttons
 	margin-right: 10px;
 	display: inline-block;
 	position: relative; 
-	border: 2px solid #333;
-    border-radius: 3px;
-	/* background: #333; */ 
-	padding: 10px;
-	font-weight: 600;
-    color: #333;
-    /* text-transform: uppercase; */
-    /* font-size: 0.8em; */
+	border: 2px solid #000;
+    border-radius: 4px;
+	padding: 5px 15px;
+    color: #000;
     background: transparent;
+    font-weight: 600;
     vertical-align: middle;
+    line-height: 25px;
 }
 /* .buttons a:hover
 {
-    border-width: 3px;
-    padding: 9px;
+    border-width: 2px;
+    padding: 4px 14px;
 } */
 .complementary .buttons
 {
