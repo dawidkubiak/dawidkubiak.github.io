@@ -230,8 +230,8 @@ header .buttons
 }
 /* .buttons a:hover
 {
-    /* border-width: 2px;
-    padding: 4px 11px; */
+    border-width: 2px;
+    padding: 4px 11px; 
     background-color: #333;
     border-color: #333;
     color: #eee;
