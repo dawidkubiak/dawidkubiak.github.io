@@ -208,23 +208,34 @@ header .buttons
 
 .buttons a
 {
-	margin-right: 10px;
+	margin-right: 1em;
 	display: inline-block;
 	position: relative; 
-	border: 2px solid #000;
-    border-radius: 3px;
-	padding: 10px;
+	/* border: 2px solid #000;
+    border-radius: 3px; 
+    padding: 10px; */
+    line-height: 1.75em;
+    border-radius: 0.5em;
+    border: .125em solid #333;
+    box-sizing: border-box;
+    padding: 0.25em 0.5em;
+	cursor: pointer;
+    display: inline-block;
     color: #000;
     background: transparent;
     vertical-align: middle;
-    line-height: 25px;
+    /* line-height: 25px; */
     font-weight: 600;
+    /* transition: background 150ms ease-out 0s,border-color 150ms ease-out 0s,color 150ms ease-out 0s,box-shadow 150ms ease-out 0s; */
 }
-.buttons a:hover
+/* .buttons a:hover
 {
-    border-width: 2px;
-    padding: 4px 11px;
-}
+    /* border-width: 2px;
+    padding: 4px 11px; */
+    background-color: #333;
+    border-color: #333;
+    color: #eee;
+} */
 .complementary .buttons
 {
 	text-align: center;
