@@ -200,7 +200,7 @@ header .buttons
 	margin-top:1em;
     text-align: center;
     margin-bottom: 0;
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 .complementary #mikko a, .bio a
 {
@@ -217,7 +217,7 @@ header .buttons
     border-radius: 3px;
     border: 2px solid #111;
     box-sizing: border-box;
-    padding: 3px 12px;
+    padding: 3px 8px;
 	cursor: pointer;
     display: inline-block;
     background: transparent;
