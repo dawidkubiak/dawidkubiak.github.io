@@ -13,7 +13,7 @@ div{
 }
 html { 
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "myriad-pro", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, myriad-pro, "myriad-pro", sans-serif;
     line-height: 1.5;
     font-weight: 400;
     text-shadow: none;
