@@ -13,7 +13,7 @@ div{
 }
 html { 
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, myriad-pro, "myriad-pro", sans-serif;
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, myriad-pro, "myriad-pro", sans-serif;
     line-height: 1.5;
     font-weight: 400;
     text-shadow: none;
@@ -49,7 +49,7 @@ h1
   font-size: 2.25em;
   padding: 0;
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
 	
   line-height: 1.15em;
   margin: 0.25em 0;
@@ -62,7 +62,7 @@ h4 {
   font-size: 1.5em;
   padding: 0;
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1em;
   /* text-indent: 1px; */
 }
@@ -226,7 +226,7 @@ header .buttons
     letter-spacing: 0.2px;
     /* background: #026fc9;  */
     font-size: 0.9em;
-    font-weight: 500;
+    font-weight: 600;
 }
 .buttons a svg{
     fill: currentColor;
