@@ -13,7 +13,7 @@ div{
 }
 html { 
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, myriad-pro, "myriad-pro", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "myriad-pro", sans-serif;
     line-height: 1.5;
     font-weight: 400;
     text-shadow: none;
@@ -49,11 +49,11 @@ h1
   font-size: 2.25em;
   padding: 0;
   margin: 0;
-  font-weight: 700;
-	
-  line-height: 1.15em;
-  margin: 0.25em 0;
+  font-weight: 600;	
+  line-height: 1em;
+  margin: 0;
   text-indent: -1px;
+  padding:0 0 12px 0;
 }
 /* .section h1, */
 h2, 
@@ -64,15 +64,18 @@ h4 {
   margin: 0;
   font-weight: 600;
   line-height: 1em;
+  padding:0 0 12px 0;
+  /* margin: 0.25em 0; */
   /* text-indent: 1px; */
 }
-.section h1
+.section h2
 {
-    margin:8px 0 10px 0;
+    padding:12px 0 12px 0;
+    /* border: 1px solid red; */
 }
-main h2
+main h1
 {
-    margin:0 0 10px 0;
+    padding:0;
 }
 /* h2,.section h1
 {
@@ -80,10 +83,9 @@ main h2
 } */
 p.bio
 {
-	padding: 0 0;
-	margin-bottom: 10px;
+	padding: 0;
+	margin: 0 12px 0 0;
 	letter-spacing: 0.002em;
-	/* color: #333333; */
 	font-weight: 400;
 }
 h3 a,
@@ -193,7 +195,7 @@ address { text-align: center; color: #EA4E35; font-style: normal;}
 }
 header .buttons
 {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 .buttons
 {
