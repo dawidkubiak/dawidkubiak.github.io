@@ -46,25 +46,26 @@ h4{
 
 h1 
 {
-  font-size: 2.25em;
-  padding: 0;
-  margin: 0;
-  font-weight: 600;	
-  line-height: 1em;
-  margin: 0;
-  text-indent: -1px;
-  padding:0 0 12px 0;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;	
+    line-height: 1em;
+    margin: 0;
+    /* text-indent: -1px; */
+    padding:0 0 12px 0;
 }
 /* .section h1, */
 h2, 
 h3,
 h4 {
-  font-size: 1.5em;
-  padding: 0;
-  margin: 0;
-  font-weight: 600;
-  line-height: 1.5em;
-  padding:0 0 12px 0;
+    font-size: 2.25em;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.25em;
+    padding:0 0 12px 0;
+
   /* margin: 0.25em 0; */
   /* text-indent: 1px; */
 }
@@ -206,7 +207,7 @@ header .buttons
 }
 .complementary #mikko a, .bio a
 {
-	font-weight: 600;
+	font-weight: 500;
 }
 #backtotop a 
 {
@@ -228,7 +229,7 @@ header .buttons
     letter-spacing: 0.2px;
     /* background: #026fc9;  */
     font-size: 0.9em;
-    font-weight: 600;
+    font-weight: 500;
 }
 .buttons a svg{
     fill: currentColor;
