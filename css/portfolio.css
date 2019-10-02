@@ -209,11 +209,11 @@ header .buttons
 .buttons a
 {
 	margin: 0 0.25em;
-    line-height: 1.75em;
+    /* line-height: 1.75em; */
     border-radius: 5px;
     border: 2px solid #111;
     box-sizing: border-box;
-    padding: 3px 8px;
+    padding: 5px 8px 3px 8px;
 	cursor: pointer;
     display: inline-block;
     background: transparent;
@@ -222,7 +222,7 @@ header .buttons
    
     /* letter-spacing: 0.2px; */
     /* background: #026fc9;  */
-    font-size: 0.85em;
+    font-size: 0.8em;
     font-weight: 600;
     text-transform: uppercase;
 }
