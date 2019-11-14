@@ -213,16 +213,18 @@ header .buttons
     border-radius: 5px;
     border: 2px solid #111;
     box-sizing: border-box;
-    padding: 3px 8px;
+    padding: 5px 8px 3px 8px;
 	cursor: pointer;
     display: inline-block;
     background: transparent;
     vertical-align: middle;
     color: #111;
-    letter-spacing: 0.2px;
+   
+    /* letter-spacing: 0.2px; */
     /* background: #026fc9;  */
-    font-size: 0.9em;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 .buttons a svg{
     fill: currentColor;
