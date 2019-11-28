@@ -284,4 +284,5 @@ header .buttons
         border-color:#ccc ;
         color: #ccc;
     }
+    a:hover { color: #ccc; }
 }
