@@ -61,11 +61,12 @@ h1
 h2, 
 h3,
 h4 {
-    font-size: 2.25em;
+    font-size: 2.5em;
     margin: 0;
     font-weight: 500;
     line-height: 1.25em;
     padding:0 0 12px 0;
+   
 }
 .section h2
 {
@@ -273,16 +274,16 @@ header .buttons
     p,
     h3 a,
     h4 a {
-      color: #ccc;
+      color: #eee;
     }
     body {
-        background: black;
-        color: #ccc;
+        background:#222;
+        color: #eee;
     }
     .buttons a
     {
-        border-color:#ccc ;
-        color: #ccc;
+        border-color:#eee ;
+        color: #eee;
     }
-    a:hover { color: #ccc; }
+    a:hover { color: #eee; }
 }
