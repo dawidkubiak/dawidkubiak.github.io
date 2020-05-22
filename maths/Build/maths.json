@@ -1,7 +1,7 @@
 {
 "companyName": "Teach Monster Games",
 "productName": "Maths",
-"productVersion": "0.35",
+"productVersion": "0.37",
 "dataUrl": "maths.data.unityweb",
 "wasmCodeUrl": "maths.wasm.code.unityweb",
 "wasmFrameworkUrl": "maths.wasm.framework.unityweb",
