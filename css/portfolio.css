@@ -208,6 +208,7 @@ header .buttons
 #backtotop a 
 {
     border:none;
+    text-transform: none;
 }
 .buttons a
 {
