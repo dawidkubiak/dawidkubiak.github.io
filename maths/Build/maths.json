@@ -1,7 +1,7 @@
 {
 "companyName": "Teach Monster Games",
-"productName": "Numbers",
-"productVersion": "0.7",
+"productName": "Maths",
+"productVersion": "0.80",
 "dataUrl": "maths.data.unityweb",
 "wasmCodeUrl": "maths.wasm.code.unityweb",
 "wasmFrameworkUrl": "maths.wasm.framework.unityweb",
@@ -11,5 +11,5 @@
 "backgroundColor": "#231F20",
 "developmentBuild": false,
 "multithreading": false,
-"unityVersion": "2019.4.10f1"
+"unityVersion": "2019.4.18f1"
 }
