@@ -98,9 +98,11 @@
   </head>
 
   <body>
+    <!-- <input type="button" value="PLAY" onclick="play()"> -->
+    <audio id="audio" src="click.mp3"></audio>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
-      <div id="loader" style="width: 960px; height: 600px">
+      <div id="loader" style="width: 960px; height: 600px" onclick="playAudio()">
         <img class="logo" src="logo.png">
         <div class="spinner"></div>
         <div class="progress"><div class="full"></div></div>
@@ -113,6 +115,12 @@
     <script>
       function OpenURL(url) {
           window.open(url, "width=window.innerWidth");
+      }
+      function playAudio() {
+        var audio = document.getElementById("audio");
+        audio.play();
+
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/maths.json", {onProgress: UnityProgress});
       }
   </script>
     <script>
@@ -170,7 +178,7 @@
   <!-- <script src="TemplateData/fingerprint2.min.jslib"></script>  -->
   <script src="Build/UnityLoader.js"></script>
   <script>
-  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/maths.json", {onProgress: UnityProgress});
+  
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
