@@ -27,9 +27,9 @@ html {
     html { font-family: 'Inter var', sans-serif; }
   } */
 body {
-	-webkit-font-feature-settings: "liga" 1, "kern";
+	/* -webkit-font-feature-settings: "liga" 1, "kern";
 	font-feature-settings: "liga" 1, "kern";
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility; */
     color:#111;
     background: #fff;
 }
