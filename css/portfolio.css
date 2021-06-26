@@ -1,4 +1,4 @@
-@import url('https://rsms.me/inter/inter.css');
+/* @import url('https://rsms.me/inter/inter.css'); */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -14,7 +14,7 @@ div{
 }
 html { 
     box-sizing: border-box;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "myriad-pro", sans-serif;
+    font-family: "Roboto","Open Sans",-apple-system, BlinkMacSystemFont, "myriad-pro", sans-serif;
     line-height: 1.5;
     font-weight: 400;
     text-shadow: none;
@@ -23,9 +23,9 @@ html {
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
-@supports (font-variation-settings: normal) {
+/* @supports (font-variation-settings: normal) {
     html { font-family: 'Inter var', sans-serif; }
-  }
+  } */
 body {
 	-webkit-font-feature-settings: "liga" 1, "kern";
 	font-feature-settings: "liga" 1, "kern";
@@ -84,6 +84,7 @@ p.bio
 	margin: 0 12px 0 0;
 	/* letter-spacing: 0.002em; */
 	font-weight: 400;
+    color: #222;
 }
 h3 a,
 h4 a {
@@ -284,4 +285,8 @@ header .buttons
         color: #eee;
     }
     a:hover { color: #eee; }
+    p.bio
+    {
+        color: #ddd;
+    }
 }
