@@ -3,7 +3,8 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Maths</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Number Skills</title>
     <style>
       html {
         box-sizing: border-box;
@@ -11,81 +12,66 @@
       *, *:before, *:after {
         box-sizing: inherit;
       }
-      body {
-        margin: 0;
-        background: #fff;
-      }
-/*  
-      #gameContainer {
-        width: 100vw;
-        height: 100vh;
+      html, body {
+        height: 100%;
       }
       canvas {
-        width: 100%;
-        height: 100%;
         display: block;
-      } */
+      }
+      body {
+        margin: 0;
+        background-color: #333333;
+      }
 
       .logo {
-          display: block;
-          /* width: max-width: 100vw;
-          height: max-height: 70vh; */
-          width:960px;
-          height: 600px;
-      }
-
-      .progress {
-          margin: 1.5em;
-          border: 1px solid #12D698;
-          width: 50vw;
-          display: none;
-      }
-      .progress .full {
-          margin: 2px;
-          background: #12D698;
-          height: 1em;
-          transform-origin: top left;
+        display: block;
+        width:100%;
+        height: 256px;
+        background-image:url("images/loader-logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
       }
 
       #loader {
         position: absolute;
         left: 0;
         top: 0;
-        background: #fff;
-        /* width: 100vw;
-        height: 100vh; */
+        background: #DD6D94;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
       }
 
-      .spinner,
-      .spinner:after {
-        border-radius: 50%;
-        width: 5em;
-        height: 5em;
+      #loader-bar {
+        width: 300px;
+        height: 40px;
+        background-color: white;
+        border-radius: 20px; /* half-height */
+        padding: 5px;
+        margin: 20px;
       }
-      .spinner {
-        margin: 10px;
-        font-size: 10px;
+
+      #loader-bar-progress {
+        width: 100%;
+        height: 100%; /* height will be loader-bar height - loader-bar padding x 2 */
+        background: #7BC39F;
+        border-radius: 15px; /* half height */
+      }
+
+      #loader-monster {
+        background-image:url("images/loader-monster.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
         position: relative;
-        text-indent: -9999em;
-        border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-        border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-        border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-        border-left: 1.1em solid #ffffff;
-        transform: translateZ(0);
-        animation: spinner-spin 1.1s infinite linear;
+        height: 35px;
+        width: 50px;
+        display: block;
+        transform: translate(-50%, -99%); /* centre horizontally, shift up by (loader-bar height - loader-bar padding) */
       }
-      @keyframes spinner-spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
+
       .webgl-content * {border: 0; margin: 0; padding: 0}
       .webgl-content {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
       .webgl-content .footer {margin-top: 5px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;}
@@ -98,30 +84,21 @@
   </head>
 
   <body onload="startAudioOnClick()">
-   
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
-      <div id="loader" style="width: 960px; height: 600px">
-        <img class="logo" src="logo.png">
-        <div class="spinner"></div>
-        <div class="progress"><div class="full"></div></div>
+
+  <div class="webgl-content">
+    <div id="gameContainer"></div>
+    <div id="loader">
+      <div class="logo"></div>
+      <div id="loader-bar">
+        <div id="loader-bar-progress"/>
       </div>
-      <div class="footer">
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-      </div>
+      <div id="loader-monster"/>
+    </div>
+    <!-- <div class="footer">
+      <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+    </div> -->
   </div>
-
-    <script>
-      function OpenURL(url) {
-          window.open(url, "width=window.innerWidth");
-      }
-      function playAudio() {
-        var audio = document.getElementById("audio");
-        audio.play();
-
-       
-      }
-  </script>
+  
     <script>
       function getMobileOperatingSystem() {
         var userAgent = navigator.userAgent.toLowerCase();
@@ -148,7 +125,7 @@
         else {
             return 'supported';
         }
-    }
+      }
   
     var ua = getMobileOperatingSystem();
     var isiOS = ua.indexOf("ios") > -1;
@@ -208,30 +185,65 @@
   <!-- <script src="TemplateData/fingerprint2.min.jslib"></script>  -->
   <script src="Build/UnityLoader.js"></script>
   <script>
-  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Default WebGL.json", {onProgress: UnityProgress});
-  function UnityProgress(gameInstance, progress) {
-    if (!gameInstance.Module) {
-      return;
-    }
-    const loader = document.querySelector("#loader");
-    if (!gameInstance.progress) {
-      const progress = document.querySelector("#loader .progress");
-      progress.style.display = "block";
-      gameInstance.progress = progress.querySelector(".full");
-      loader.querySelector(".spinner").style.display = "none";
-    }
-    gameInstance.progress.style.transform = `scaleX(${progress})`;
-    if (progress === 1 && !gameInstance.removeTimeout) {
-      gameInstance.removeTimeout = setTimeout(function() {
-          loader.style.display = "none";
-      }, 0);
-    }
-  }
-		   
-	// new Fingerprint2().get(function(result, components) {
-		
-	// 	window.browserFingerprint = result;
-	// });
+
+    (function main(){
+      var progressBar = document.getElementById("loader-bar-progress");
+      var progressMonster = document.getElementById("loader-monster");
+      var maxProgressBarWidth = 290;
+      
+      function updateProgress(progress){
+        var width = Math.max(30, maxProgressBarWidth * progress);
+        progressBar.style.width = `${width}px`;
+        progressMonster.style.left = `${width-3}px`;
+      }
+
+      function unityProgressCallback(gameInstance, progress) {
+        if (!gameInstance.Module) {
+          return;
+        }
+        updateProgress(progress);
+        if (progress === 1 && !gameInstance.removeTimeout) {
+          gameInstance.removeTimeout = setTimeout(function() {
+            document.getElementById("loader").style.display = "none";
+          }, 0);
+        }
+      }
+
+      function onResize(){
+        // fill browser window as much as possible,
+        // letter box if min/max aspect ratio exceded
+        var maxAspectRatio = 20/9;
+        var minAspectRatio = 4/3;
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var aspectRatio = width/height;
+        if(aspectRatio > maxAspectRatio){
+          aspectRatio = maxAspectRatio;
+          height = height;
+          width = height * aspectRatio;
+        } else if(aspectRatio < minAspectRatio){
+          aspectRatio = minAspectRatio;
+          width = width;
+          height = width / aspectRatio;
+        }
+
+        var gameContainer = document.getElementById("gameContainer");
+        gameContainer.style.width = width + "px";
+        gameContainer.style.height = height + "px";
+
+        var loader = document.getElementById("loader");
+        loader.style.width = width + "px";
+        loader.style.height = height + "px";
+      }
+
+      // set initial size
+      onResize();
+      // initialise progress display
+      updateProgress(0);
+
+      document.body.onresize = onResize;
+      UnityLoader.instantiate("gameContainer", "Build/Develop WebGL Full Menu.json", {onProgress: unityProgressCallback});
+    })();
 
   </script>
 </html>
