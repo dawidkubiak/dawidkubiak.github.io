@@ -53,11 +53,35 @@
         margin: 20px;
       }
 
+      @-webkit-keyframes loader-bar-animation {
+        from {
+          background-position: 40px 0;
+        }
+        to {
+          background-position: 0 0;
+        }
+      }
+      @keyframes loader-bar-animation {
+        from {
+          background-position: 40px 0;
+        }
+        to {
+          background-position: 0 0;
+        }
+      }
+
       #loader-bar-progress {
         width: 100%;
         height: 100%; /* height will be loader-bar height - loader-bar padding x 2 */
         background: #7BC39F;
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+        background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+        background-size: 40px 40px;
         border-radius: 15px; /* half height */
+        -webkit-animation: loader-bar-animation 2s linear infinite;
+        -o-animation: loader-bar-animation 2s linear infinite;
+        animation: loader-bar-animation 2s linear infinite;
       }
 
       #loader-monster {
@@ -70,6 +94,23 @@
         width: 50px;
         display: block;
         transform: translate(-50%, -99%); /* centre horizontally, shift up by (loader-bar height - loader-bar padding) */
+      }
+
+      #eye {
+        position: absolute;
+        top:14px;
+        left:26px;
+      }
+
+      #pupil {
+        height: 10px;
+        width: 10px;
+        background-image:url("images/loader-monster-eye.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        transform-origin: center;
       }
 
       .webgl-content * {border: 0; margin: 0; padding: 0}
@@ -92,7 +133,11 @@
       <div id="loader-bar">
         <div id="loader-bar-progress"/>
       </div>
-      <div id="loader-monster"/>
+      <div id="loader-monster">
+        <div id="eye">
+          <div id="pupil"/>
+        </div>
+      </div>
     </div>
     <!-- <div class="footer">
       <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
@@ -182,8 +227,8 @@
   </script>
   
   </body>
-  <!-- <script src="TemplateData/fingerprint2.min.jslib"></script>  -->
-  <script src="Build/UnityLoader.js"></script>
+  
+  <script src="anime.min.js"></script>
   <script>
 
     (function main(){
@@ -191,10 +236,11 @@
       var progressMonster = document.getElementById("loader-monster");
       var maxProgressBarWidth = 290;
       
+      
       function updateProgress(progress){
         var width = Math.max(30, maxProgressBarWidth * progress);
         progressBar.style.width = `${width}px`;
-        progressMonster.style.left = `${width-3}px`;
+        progressMonster.style.left = `${Math.round(width)-3}px`;
       }
 
       function unityProgressCallback(gameInstance, progress) {
@@ -204,6 +250,7 @@
         updateProgress(progress);
         if (progress === 1 && !gameInstance.removeTimeout) {
           gameInstance.removeTimeout = setTimeout(function() {
+            stopEyes();
             document.getElementById("loader").style.display = "none";
           }, 0);
         }
@@ -236,15 +283,77 @@
         loader.style.height = height + "px";
       }
 
+      var blinkDuration = 300;
+      var eyeTriggerPeriod = 1000;
+      var eyeTriggerRange = 1000;
+      var eyeSize = 10;
+      var rovingRadius = 4;
+      var lastAngle = 0;
+
+      function blink(){
+        var duration = blinkDuration/2;
+        var tl = anime.timeline({
+          targets: "#pupil",
+          duration: duration,
+        });
+        tl.add({
+          scaleY: 0,
+          easing: "easeInQuart",
+        });
+        tl.add({
+          scaleY: 1,
+          easing: "easeOutQuart",
+        }, "+=50");
+      }
+
+      function rove(){
+        var radius = Math.random() < 0.2 ? 0 : rovingRadius;
+        var angle = lastAngle + Math.PI * 0.5 + Math.random() * Math.PI * 1.5 * (Math.random() < 0.5 ? 1 : -1);
+        lastAngle = angle;
+        var x = -eyeSize/2 + radius * Math.cos(angle);
+        var y = -eyeSize/2 + radius * Math.sin(angle);
+
+        anime({
+          targets: "#eye",
+          duration: 300,
+          easing: "easeOutQuart",
+          translateX: Math.round(x),
+          translateY: Math.round(y)
+        });
+      }
+
+      function updateEyes(){
+        console.log("updateEyes");
+        if(Math.random() < 0.3){
+          blink();
+        } else {
+          rove();
+        }
+        eyesTimeout = setTimeout(updateEyes, eyeTriggerPeriod + eyeTriggerRange * Math.random());
+      }
+
+      function stopEyes(){
+        clearTimeout(eyesTimeout);
+      }
+
+      // set initial eye state and start eyes ticking
+      rove();
+      updateEyes();
+
       // set initial size
       onResize();
       // initialise progress display
       updateProgress(0);
 
       document.body.onresize = onResize;
-      UnityLoader.instantiate("gameContainer", "Build/Develop WebGL Full Menu.json", {onProgress: unityProgressCallback});
+      window.unityProgressCallback = unityProgressCallback;
     })();
 
+  </script>
+
+  <script src="Build/UnityLoader.js"></script>
+  <script>
+    UnityLoader.instantiate("gameContainer", "Build/web.json", {onProgress: unityProgressCallback});
   </script>
 </html>
 
