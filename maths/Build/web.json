@@ -1,7 +1,7 @@
 {
 "companyName": "Teach Monster Games",
 "productName": "Number Skills",
-"productVersion": "2.1.2110.1",
+"productVersion": "2.1.2110.0",
 "dataUrl": "web.data.unityweb",
 "wasmCodeUrl": "web.wasm.code.unityweb",
 "wasmFrameworkUrl": "web.wasm.framework.unityweb",
