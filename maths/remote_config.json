@@ -1,21 +1,15 @@
 {
     "stores":
     {
-        "AppleLatestVersion": "2.1.2169",
-        "AppleLastSupported": "1.0",
+        "AppleRecommendedVersion": "2.1.2169",
+        "AppleMinVersion": "1.0.0",
         "AppleStoreLink": "itms-apps://itunes.apple.com/us/developer/teach-your-monster/id1507984567",
-        "GoogleLatestVersion": "2.1.2165",
-        "GoogleLastSupported": "1.0",
+        "GoogleRecommendedVersion": "2.1.2165",
+        "GoogleMinVersion": "1.0.0",
         "GoogleStoreLink" : "market://details?id=com.TeachMonsterGames.NumberSkills",
-        "AmazonLatestVersion": "2.1.2170",
-        "AmazonLastSupported": "1.0",
+        "AmazonRecommendedVersion": "2.1.2170",
+        "AmazonMinVersion": "1.0.0",
         "AmazonStoreLink" : "amzn://apps/android?p=com.TeachMonsterGames.NumberSkills"
     },
-    "configs":
-    {
-        "testA": true,
-        "testB": false,
-        "configA": true,
-        "configB": false
-    }
+    "splitTestGoup": 1
 }
